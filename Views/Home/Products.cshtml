@@ -1,0 +1,26 @@
+@model MyViewModel
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            @await Html.PartialAsync("_ProductForm", Model.Product)
+        </div>
+
+        <div class="col-md-9">
+            <div class="row">
+                @foreach(var p in Model.AllProducts)
+                {
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100 text-center">
+                            <img src="@p.Image" alt="@p.Name" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h5 class="card-title">@p.Name</h5>
+                                <p class="card-text">(@p.Quantity left)</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+@model Product
+
+<div class="container mt-5">
+    <h4 class="mb-4">Add a New Product</h4>
+    <form asp-action="CreateProduct" method="post" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" placeholder="Enter product name" required>
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <div class="invalid-feedback">Product name is required.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Image" class="form-label"></label>
+            <input asp-for="Image" type="url" class="form-control" placeholder="Enter image URL" required>
+            <span asp-validation-for="Image" class="text-danger"></span>
+            <div class="invalid-feedback">Image URL is required.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantity" class="form-label"></label>
+            <input asp-for="Quantity" type="number" class="form-control" placeholder="Enter quantity" required>
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+            <div class="invalid-feedback">Quantity is required.</div>
+        </div>
+        <input type="submit" value="Add Product" class="btn btn-primary w-100">
+    </form>
+</div>
