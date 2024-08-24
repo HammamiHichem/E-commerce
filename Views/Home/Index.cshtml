@@ -3,13 +3,13 @@
 }
 @model MyViewModel
 
-<div class="container mt-5">
+<div class="container mt-5 text-light bg-dark">
     <h3 class="mb-4">All Products</h3>
     <div class="row">
         @foreach(var p in Model.AllProducts)
         {
             <div class="col-md-3 col-sm-6 mb-4">
-                <div class="card h-100 text-center">
+                <div class="card h-100 text-center bg-secondary border-light">
                     <img src="@p.Image" alt="@p.Name" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h5 class="card-title">@p.Name</h5>
@@ -23,13 +23,13 @@
         <a href="/products" class="btn btn-primary">See more products</a>
     </div>
 
-    <hr class="my-5">
+    <hr class="my-5 border-light">
 
     <h3 class="mb-4">Recent Orders</h3>
     <ul class="list-group mb-4">
         @foreach(var o in Model.AllOrders)
         {
-            <li class="list-group-item">
+            <li class="list-group-item bg-secondary border-light">
                 <strong>@o.Customer.Name</strong> purchased <strong>@o.QuantityBought</strong> 
                 <strong>@o.Product.Name</strong> 
                 @(o.CreatedAt.Month - DateTime.Now.Month) month(s), @(o.CreatedAt.Day - DateTime.Now.Day) day(s) ago
@@ -40,13 +40,13 @@
         <a href="/orders" class="btn btn-secondary">See all orders</a>
     </div>
 
-    <hr class="my-5">
+    <hr class="my-5 border-light">
 
     <h3 class="mb-4">New Customers</h3>
     <ul class="list-group mb-4">
         @foreach(var c in Model.AllCustomers)
         {
-            <li class="list-group-item">
+            <li class="list-group-item bg-secondary border-light">
                 <strong>@c.Name</strong> joined the store 
                 @(c.CreatedAt.Month - DateTime.Now.Month) month(s), @(c.CreatedAt.Day - DateTime.Now.Day) day(s) ago
             </li>

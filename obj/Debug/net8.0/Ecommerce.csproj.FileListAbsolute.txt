@@ -37,3 +37,4 @@ D:\22-08-2024\Hichems work\E-commerce\Ecommerce\obj\Debug\net8.0\refint\Ecommerc
 D:\22-08-2024\Hichems work\E-commerce\Ecommerce\obj\Debug\net8.0\Ecommerce.pdb
 D:\22-08-2024\Hichems work\E-commerce\Ecommerce\obj\Debug\net8.0\Ecommerce.genruntimeconfig.cache
 D:\22-08-2024\Hichems work\E-commerce\Ecommerce\obj\Debug\net8.0\ref\Ecommerce.dll
+D:\22-08-2024\Hichems work\E-commerce\Ecommerce\obj\Debug\net8.0\Ecommerce.sourcelink.json

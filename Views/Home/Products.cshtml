@@ -1,6 +1,6 @@
 @model MyViewModel
 
-<div class="container mt-5">
+<div class="container mt-5 text-light bg-dark">
     <div class="row">
         <div class="col-md-3">
             @await Html.PartialAsync("_ProductForm", Model.Product)
@@ -11,7 +11,7 @@
                 @foreach(var p in Model.AllProducts)
                 {
                     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card h-100 text-center">
+                        <div class="card h-100 text-center bg-secondary border-light">
                             <img src="@p.Image" alt="@p.Name" class="card-img-top img-fluid">
                             <div class="card-body">
                                 <h5 class="card-title">@p.Name</h5>
